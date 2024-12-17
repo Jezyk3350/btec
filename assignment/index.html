@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action 4 Preservation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('leaf.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+       
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 30px 20px;
+            border-radius: 15px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+       
+        .overlay h1 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        
+        .overlay p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #d3d3d3;
+        }
+
+        
+        .menu-item {
+            font-size: 18px;
+            margin: 12px 0;
+            text-transform: uppercase;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            color: #ffcc00; 
+        }
+
+        
+        .footer-text {
+            font-size: 14px;
+            margin-top: 30px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: #f2f2f2;
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        
+        @media (max-width: 768px) {
+            .overlay {
+                padding: 20px 15px;
+                max-width: 90%;
+            }
+
+            .overlay h1 {
+                font-size: 22px;
+            }
+
+            .menu-item {
+                font-size: 16px;
+            }
+
+            .footer-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="main.js"></script>
+    <div class="overlay">
+        <h1>Erica's Blog</h1>
+        <p>Earth is our playground!</p>
+
+        
+        <div class="menu-item" site="blog.html">Blog</div>
+        <div class="menu-item" site="about.html">About me</div>
+        <div class="menu-item" site="merch.html">Merch</div>
+        <div class="menu-item" site="contact.html">Contact</div>
+        
+
+        
+        <p class="footer-text">Let's conquer the world!</p>
+    </div>
+</body>
+</html>
+

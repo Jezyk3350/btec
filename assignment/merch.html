@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Merchandise</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('leaf.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        
+        .merch-box {
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 30px 20px;
+            border-radius: 15px;
+            max-width: 900px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+      
+        .merch-box h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+       
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+      
+        .merch-item {
+            background-color: #2e3b34; 
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        
+        .merch-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+      
+        .merch-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #ccc; 
+        }
+
+        
+        .merch-item button {
+            background-color: #4caf50; 
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        
+        .merch-item button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        
+        @media (max-width: 768px) {
+            .merch-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .merch-item {
+                width: 130px;
+            }
+
+            .merch-box h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="merch-box">
+        <h1>MY MERCHANDISE</h1>
+       
+        <div class="merch-grid">
+           
+            <div class="merch-item">
+                <img src="shirt1.jpg" alt="Tshirt"> 
+                <button onclick="buyNow('Tshirt')">Buy for 25$</button>
+            </div>
+            <div class="merch-item">
+                <img src="shirt2.jpg" alt="Hat"> 
+                <button onclick="buyNow('Hat')">Buy for 25$</button>
+            </div>
+            <div class="merch-item">
+                <img src="pants.jpg" alt="Pants"> 
+                <button onclick="buyNow('Pants')">Buy for 20$</button>
+            </div>
+            <div class="merch-item">
+                <img src="sign.jpg" alt="Shoes"> 
+                <button onclick="buyNow('Shoes')">Buy for 12$</button>
+            </div>
+            <div class="merch-item">
+                <img src="hat.jpg" alt="Baseball Hat"> 
+                <button onclick="buyNow('Baseball Hat')">Buy for 10$</button>
+            </div>
+            <div class="merch-item">
+                <img src="bag.jpg" alt="Bag"> 
+                <button onclick="buyNow('Bag')">Buy for 5$</button>
+            </div>
+            <div class="merch-item">
+                <img src="boots.jpg" alt="Boots"> 
+                <button onclick="buyNow('Boots')">Buy for 30$</button>
+            </div>
+            <div class="merch-item">
+                <img src="socks.jpg" alt="Socks"> 
+                <button onclick="buyNow('Socks')">Buy for 7$</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function buyNow(item) {
+            alert(`You selected to buy: ${item}`);
+        }
+    </script>
+</body>
+</html>

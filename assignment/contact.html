@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('leaf.jpg'); 
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        
+        .contact-box {
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.2s ease-out, slideDown 1.2s ease-out;
+        }
+
+        
+        .contact-box h1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        
+        .contact-section {
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 14px;
+            margin: 5px 0;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        
+        .contact-section p:hover {
+            color: #ffcc00; 
+            transform: scale(1.05);
+        }
+
+        
+        .footer-text {
+            font-size: 12px;
+            margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: #d3d3d3;
+        }
+
+       
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+     
+        @media (max-width: 768px) {
+            .contact-box {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .contact-box h1 {
+                font-size: 20px;
+            }
+
+            .contact-section p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="contact-box">
+        <h1>MY CONTACT INFORMATION!</h1>
+        <div class="contact-section">
+            <p><strong>For blog ideas:</strong></p>
+            <p>Erica@gmail.com</p>
+            <p>+34 XXX XXX XXX</p>
+        </div>
+        <div class="contact-section">
+            <p><strong>For business purposes:</strong></p>
+            <p>Erica@wisopg.com</p>
+        </div>
+        <p class="footer-text">Let's stay connected!</p>
+    </div>
+</body>
+</html>
